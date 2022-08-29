@@ -18,7 +18,7 @@ const criarItem = (tarefa, status) => {
     `
     document.getElementById('todoList').appendChild(item);
 }
-
+// Funções para atualização da tela
 const limparTarefas = () => {
     const todoList = document.getElementById('todoList');
     while (todoList.firstChild) {
