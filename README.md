@@ -4,6 +4,12 @@
 
 #
 
-🗨 Projeto pessoal básico de um check list de afazeres para o dia a dia com Javascript puro.
+🗨 Projeto pessoal de um check list de afazeres para o dia a dia com Javascript puro.
 
-Projeto em desenvolvimento 🚧
+
+## ✅RESULTADO
+<div align="center">
+   <img src="https://i.imgur.com/oDJKktU.gif" title="source: imgur.com" width=50%"/>
+</div>
+
+
