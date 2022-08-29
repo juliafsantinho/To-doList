@@ -31,4 +31,17 @@ const atualizarTarefa = () => {
     bancoDeDados.forEach (item => criarItem (item.tarefa, item.status))     // forEach = percorre o array item a item
 }
 
+// Criando a função para inserir uma nova tarefa
+const inserirItem = (evento) => {
+    const tecla = evento.key;
+    const texto = evento.target.value;
+    if (tecla === 'Enter'){
+        bancoDeDados.push({'tarefa': texto, 'status': ''});
+        atualizarTarefa();
+        evento.target.value = ''; // limpando a tarefa da caixa de texto ao atualizar a pagina
+    }
+}
+
+document.getElementById('newItem').addEventListener('keypress', inserirItem);
+
 atualizarTarefa();
