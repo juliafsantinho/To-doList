@@ -4,7 +4,7 @@
 let bancoDeDados = [
     {'tarefa':' Estudar', 'status': ''},
     {'tarefa': ' Lavar Louça', 'status': 'checked'},
-    {'tarefa': ' Academia', 'status': 'checked'},
+    {'tarefa': ' Academia', 'status': ''},
 ];
 
 // Função que ensina o Javascript a criar o elemento que queremos
@@ -16,10 +16,18 @@ const criarItem = (tarefa, status) => {
         <div>${tarefa}</div>
         <input type = "button" value = "X">
     `
-    document.getElementById('to-doList').appendChild(item);
+    document.getElementById('todoList').appendChild(item);
+}
+
+const limparTarefas = () => {
+    const todoList = document.getElementById('todoList');
+    while (todoList.firstChild) {
+        todoList.removeChild(todoList.lastChild);
+    }
 }
 
 const atualizarTarefa = () => {
+    limparTarefas();
     bancoDeDados.forEach (item => criarItem (item.tarefa, item.status))     // forEach = percorre o array item a item
 }
 
