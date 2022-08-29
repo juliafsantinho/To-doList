@@ -48,6 +48,12 @@ const removerItem = (indice) => {
     atualizarTarefa();
 }
 
+//Programando a ação de atualizar o status da tarefa
+const atualizarItem = (indice) => {
+    bancoDeDados[indice].status = bancoDeDados[indice].status === '' ? 'checked' : '';
+    atualizarTarefa();
+}
+
 
 // Identificando as tarefas com índice
 const clickItem = (evento) => {
@@ -57,7 +63,7 @@ const clickItem = (evento) => {
         removerItem(indice);
     } else if(elemento.type === 'checkbox') {
         const indice = elemento.dataset.indice;
-        atualizarTarefa(indice);
+        atualizarItem(indice);
     }
 }
 
