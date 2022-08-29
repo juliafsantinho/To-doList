@@ -42,12 +42,22 @@ const inserirItem = (evento) => {
     }
 }
 
+// Programando a ação de deletar tarefas
+const removerItem = (indice) => {
+    bancoDeDados.splice(indice, 1);
+    atualizarTarefa();
+}
+
+
 // Identificando as tarefas com índice
 const clickItem = (evento) => {
     const elemento = evento.target;
     if(elemento.type === 'button') {
         const indice = elemento.dataset.indice
         removerItem(indice);
+    } else if(elemento.type === 'checkbox') {
+        const indice = elemento.dataset.indice;
+        atualizarTarefa(indice);
     }
 }
 
